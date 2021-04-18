@@ -427,11 +427,11 @@ input:-webkit-autofill:focus {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 12px;
+    font-size: 20px;
     color: #ffffff;
     cursor: pointer;
 }
 
 .cerrar i {
-    margin-top: 4px;
+    margin-top: 1px;
 }

@@ -23,9 +23,12 @@
        <div class="sesion-cart">
             <div class="login" (click)="mostrarModal()">
                 <div class="icon-user">
-                    <i class="fi-rr-user"></i>
+                    <i class="fas fa-user"></i>
                 </div>          
                 <p>Login</p>
+                <div class="carro">
+                    <i class="fas fa-cart-arrow-down"></i>
+                </div>
             </div>
        </div>
     </div>
@@ -36,7 +39,7 @@
 <div class="modal-login"  [ngClass]="{activarModalLogin: modal && login}" >
     <div class="login-principal">
         <div class="cerrar" (click)="cerrarModal()">
-            <i class="fi-rr-cross"></i>
+            <i class="fas fa-times"></i>
         </div>
         <p>Login</p>
 
@@ -71,7 +74,7 @@
 <div class="modal-register"  [ngClass]="{activarModalRegister: register && modal}" >
     <div class="login-principal register">
         <div class="cerrar" (click)="cerrarModal()" >
-            <i class="fi-rr-cross"></i>
+            <i class="fas fa-times"></i>
         </div>
         <p>Registrate</p>
 

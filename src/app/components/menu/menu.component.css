@@ -74,6 +74,13 @@
     font-size: 20px;
 }
 
+.carro {
+    margin: 6px 0px 0px 10px;
+    font-size: 25px;
+    color: #1B1464;
+    cursor: pointer;
+}
+
 .login p {
     font-size: 16px;
     font-weight: 500; 
