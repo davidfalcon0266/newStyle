@@ -1,0 +1,124 @@
+
+<div class="contenedor-header">
+    <div class="header-principal">
+       <div class="menu">
+            <div class="nav-link">
+                <div routerLinkActive="active" routerLink="home" class="nav-link">Inicio</div>
+            </div>
+            <div  class="nav-link">
+                <div routerLinkActive="active" routerLink="about" class="nav-link">Conoceme</div>
+            </div>
+            <div  class="nav-link">
+                <div routerLinkActive="active" routerLink="productos" class="nav-link">Productos</div>
+            </div>
+            <div  class="nav-link">
+                <div routerLinkActive="active" routerLink="contacto" class="nav-link">Contacto</div>
+            </div>
+       </div>
+       <div class="logo-principal">
+             <div class="logo">
+                 <p> Pet New Style</p>
+             </div>
+       </div>
+       <div class="sesion-cart">
+            <div class="login" (click)="mostrarModal()">
+                <div class="icon-user">
+                    <i class="fi-rr-user"></i>
+                </div>          
+                <p>Login</p>
+            </div>
+       </div>
+    </div>
+</div>
+
+<div [ngClass]="{activarModal: modal}" class="modal-principal"></div>
+
+<div class="modal-login"  [ngClass]="{activarModalLogin: modal && login}" >
+    <div class="login-principal">
+        <div class="cerrar" (click)="cerrarModal()">
+            <i class="fi-rr-cross"></i>
+        </div>
+        <p>Login</p>
+
+        <form class="form-suscribe-login">
+            <div class="name">
+                <input type="text" autocomplete="off"  name="name" required>
+                <label for="name" class="label-name">
+                    <span class="text-nombre">
+                        Nombre
+                    </span>
+                </label>
+            </div>
+                     
+            <div class="email">
+                <input type="text" autocomplete="off"  name="email" required>
+                <label for="email" class="label-email">
+                    <span class="text-email">
+                        Email
+                    </span>
+                </label>
+            </div>              
+            <button type="button" class="buton-suscribete"> Iniciar sesión</button>  
+            <div class="mostrar-register">
+                <h5 class="sin-cuenta" (click)="register = !register; login = !login">¿Aun no tienes cuenta?</h5>
+                <div class="registrate" (click)="register = !register; login = !login">Registrate</div>
+           </div>              
+        </form>
+        
+    </div>
+</div>
+
+<div class="modal-register"  [ngClass]="{activarModalRegister: register && modal}" >
+    <div class="login-principal register">
+        <div class="cerrar" (click)="cerrarModal()" >
+            <i class="fi-rr-cross"></i>
+        </div>
+        <p>Registrate</p>
+
+        <form class="form-suscribe-login">
+            <div class="name">
+                <input type="text" autocomplete="off"  name="name" required>
+                <label for="name" class="label-name">
+                    <span class="text-nombre">
+                        Nombre
+                    </span>
+                </label>
+            </div>
+                     
+            <div class="email">
+                <input type="text" autocomplete="off"  name="email" required>
+                <label for="email" class="label-email">
+                    <span class="text-email">
+                        Email
+                    </span>
+                </label>
+            </div>    
+            
+            <div class="password1">
+                <input type="password" autocomplete="off"  name="password1" required>
+                <label for="password1" class="label-password1">
+                    <span class="text-password1">
+                        Password
+                    </span>
+                </label>
+            </div>  
+            
+            <div class="password2">
+                <input type="password" autocomplete="off"  name="password2" required>
+                <label for="password2" class="label-password2">
+                    <span class="text-password2">
+                       Repite password
+                    </span>
+                </label>
+            </div>   
+            
+            
+            <button type="button" class="buton-registrate"> Registrate</button>  
+            <div class="mostrar-login">
+                <h5 class="sin-cuenta" (click)="register = !register; login = !login">¿Ya tienes cuenta?</h5>
+                <div class="registrate" (click)="register = !register; login = !login">Inicia sesión</div>
+           </div>              
+        </form>
+      
+    </div>
+</div>

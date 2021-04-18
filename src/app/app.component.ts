@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CompartidoService } from './services/compartido.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'newStyleDog';
+  modal: boolean;
+
+  constructor(public modalService: CompartidoService) {
+     this.modal = modalService.modal;
+  }
+
+
 }

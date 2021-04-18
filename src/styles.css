@@ -1,1 +1,437 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.contenedor {
+    max-width: 1080px;
+    width: 100%;
+    margin: 0 auto;
+    transition: ease-in-out 0.9s;
+}
+
+.modal-principal {
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(01, 01, 01, .8);
+    z-index: 99999;
+    transition: all ease-in-out 0.9s;
+}
+
+.activarModal {
+    right: 0;
+    opacity: 1;
+}
+
+.modal-login {
+    opacity: 0;
+    position: fixed;
+    top: -100%;
+    right: 35%;
+    max-width: 400px;
+    width: 100%;
+    max-height: 500px;
+    height: 100%;
+    background-color: #ffffff;
+    z-index: 999999;
+    transition: all ease-in-out 0.9s;
+    margin: 0 auto;
+}
+
+.activarModalLogin {
+    top: 15%;
+    opacity: 1;
+}
+
+.modal-register {
+    opacity: 0;
+    position: fixed;
+    bottom: -100%;
+    right: 35%;
+    max-width: 400px;
+    width: 100%;
+    max-height: 500px;
+    height: 100%;
+    background-color: #ffffff;
+    z-index: 999999;
+    transition: all ease-in-out 0.9s;
+    margin: 0 auto;
+}
+
+.activarModalRegister {
+    bottom: 15%;
+    opacity: 1;
+}
+.login-principal {
+    text-align: center;
+    width: 90%;
+    height: 400px;
+    margin: 0 auto;
+    padding: 30px 0px;
+    border: 25px solid #1B1464;
+    border-radius: 0px 0px 30px 0px;
+}
+
+.login-principal p {
+    font-family: 'Lobster', cursive;
+    font-size: 32px;
+    font-weight: bold;
+    color: #1B1464;
+    margin: 55px auto 45px;
+}
+
+.register p {
+    font-family: 'Lobster', cursive;
+    font-size: 32px;
+    font-weight: bold;
+    color: #1B1464;   
+    margin: 0px auto 20px;
+}
+/* Formulario */
+
+.form-suscribe-login {
+    max-width: 300px;
+    width: 100%;
+    position: relative;
+    left: 8%;
+}
+
+.form-suscribe-login .name input {
+    width: 100%;
+    background-color: transparent;
+    color: #273746;
+    font-family: 'Nunito Sans', sans-serif;
+    padding-top: 20px;
+    border: none;
+    outline: 0px;
+    position: relative;
+    top: -6px;
+}
+
+
+.form-suscribe-login .label-name {
+    position: absolute;
+    top: 35px;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+    border-bottom: 1px solid #c7c7c7;
+}
+
+.form-suscribe-login .label-name::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 100%;
+    border-bottom: 3px solid #1B1464;
+    transform: translateX(-300%);
+    transition: all0.3S ease;
+}
+
+.text-nombre {
+    position: absolute;
+    bottom: 5PX;
+    left: 0;
+    transition: all 0.3s ease;
+    font-size: 16px;
+    font-weight: 500; 
+    color: #B2BABB;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus {
+    background-color: transparent;
+} 
+
+.form-suscribe-login input:focus + .label-name .text-nombre,
+.form-suscribe-login input:valid + .label-name .text-nombre {
+    transform: translateY(-20px);
+    font-size: 14px;
+    color: #1B1464;
+    background-color: transparent;
+}
+
+.form-suscribe-login input:focus + .label-name::after,
+.form-suscribe-login input:valid + .label-name::after {
+    transform: translateX(0%);
+}
+
+
+.form-suscribe-login .email input {
+    
+    width: 100%;
+    background-color: transparent;
+    color: #273746;
+    font-family: 'Nunito Sans', sans-serif;
+    padding-top: 20px;
+    border: none;
+    outline: 0px;
+    position: relative;
+    top: 20px;
+}
+
+.form-suscribe-login .label-email {
+    position: absolute;
+    top: 98px;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+    border-bottom: 1px solid #c7c7c7;
+}
+
+.form-suscribe-login .label-email::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 100%;
+    border-bottom: 3px solid #1B1464;
+    transform: translateX(-300%);
+    transition: all0.3S ease;
+}
+
+.text-email {
+    position: absolute;
+    bottom: 5PX;
+    left: 0;
+    transition: all 0.3s ease;
+    font-size: 16px;
+    font-weight: 500; 
+    color: #B2BABB;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.form-suscribe-login input:focus + .label-email .text-email,
+.form-suscribe-login input:valid + .label-email .text-email {
+    transform: translateY(-20px);
+    font-size: 14px;
+    color: #1B1464;
+}
+
+.form-suscribe-login input:focus + .label-email::after,
+.form-suscribe-login input:valid + .label-email::after {
+    transform: translateX(0%);
+}
+
+
+.form-suscribe-login .password1 input {
+    
+    width: 100%;
+    background-color: transparent;
+    color: #273746;
+    font-family: 'Nunito Sans', sans-serif;
+    padding-top: 20px;
+    border: none;
+    outline: 0px;
+    position: relative;
+    top: 40px;
+}
+
+.form-suscribe-login .label-password1 {
+    position: absolute;
+    top: 157px;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+    border-bottom: 1px solid #c7c7c7;
+}
+
+.form-suscribe-login .label-password1::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 100%;
+    border-bottom: 3px solid #1B1464;
+    transform: translateX(-300%);
+    transition: all0.3S ease;
+}
+
+.text-password1 {
+    position: absolute;
+    bottom: 5PX;
+    left: 0;
+    transition: all 0.3s ease;
+    font-size: 16px;
+    font-weight: 500; 
+    color: #B2BABB;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.form-suscribe-login input:focus + .label-password1 .text-password1,
+.form-suscribe-login input:valid + .label-password1 .text-password1 {
+    transform: translateY(-20px);
+    font-size: 14px;
+    color: #1B1464;
+}
+
+.form-suscribe-login input:focus + .label-password1::after,
+.form-suscribe-login input:valid + .label-password1::after {
+    transform: translateX(0%);
+}
+
+
+.form-suscribe-login .password2 input {
+    
+    width: 100%;
+    background-color: transparent;
+    color: #273746;
+    font-family: 'Nunito Sans', sans-serif;
+    padding-top: 20px;
+    border: none;
+    outline: 0px;
+    position: relative;
+    top: 60px;
+}
+
+.form-suscribe-login .label-password2 {
+    position: absolute;
+    top: 216px;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+    border-bottom: 1px solid #c7c7c7;
+}
+
+.form-suscribe-login .label-password2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 100%;
+    border-bottom: 3px solid #1B1464;
+    transform: translateX(-300%);
+    transition: all0.3S ease;
+}
+
+.text-password2 {
+    position: absolute;
+    bottom: 5PX;
+    left: 0;
+    transition: all 0.3s ease;
+    font-size: 16px;
+    font-weight: 500; 
+    color: #B2BABB;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.form-suscribe-login input:focus + .label-password2 .text-password2,
+.form-suscribe-login input:valid + .label-password2 .text-password2 {
+    transform: translateY(-20px);
+    font-size: 14px;
+    color: #1B1464;
+}
+
+.form-suscribe-login input:focus + .label-password2::after,
+.form-suscribe-login input:valid + .label-password2::after {
+    transform: translateX(0%);
+}
+.buton-suscribete {
+    position: absolute;
+    top: 150px;
+    left: 22%;
+    display: block;
+    width: 170px;
+    height: 40px;
+    background-color: #1B1464;
+    color: #ffffff;
+    text-align: center;
+    border: none;
+    font-size: 14px;
+    font-weight: 500;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.buton-suscribete:hover {
+    background-color: #28216d;
+    opacity: 75%;
+}
+
+.buton-registrate {
+    position: absolute;
+    top: 260px;
+    left: 22%;
+    display: block;
+    width: 170px;
+    height: 40px;
+    background-color: #1B1464;
+    color: #ffffff;
+    text-align: center;
+    border: none;
+    font-size: 14px;
+    font-weight: 500;
+    opacity: 1;
+    cursor: pointer;
+}
+.buton-registrate:hover {
+    background-color: #28216d;
+    opacity: 75%;
+}
+
+.mostrar-register {
+    position: absolute;
+    top: 200px;
+    left: 27%;
+    display: block;
+    color: #28216d;
+    text-align: center;
+    border: none;
+    font-size: 14px;
+    font-weight: 500;
+    opacity: 1;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.mostrar-login {
+    position: absolute;
+    bottom: -200px;
+    left: 30%;
+    display: block;
+    color: #28216d;
+    text-align: center;
+    border: none;
+    font-size: 14px;
+    font-weight: 500;
+    opacity: 1;
+    cursor: pointer;
+    font-size: 14px;
+}
+ .sin-cuenta, .registrate {
+    font-size: 14px;
+    margin: 0px auto 5px;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.cerrar {
+    position: absolute;
+    right: 35px;
+    top: 40px;
+    width: 30px;
+    height: 30px;
+    background: #28216d;
+    border-radius: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.cerrar i {
+    margin-top: 4px;
+}

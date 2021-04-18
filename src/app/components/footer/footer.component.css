@@ -1,0 +1,185 @@
+.footer {
+    width: 100%;
+    height: 650px;
+    background-color: #DC2244;
+    color: #ffffff;
+    font-size: 16px;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.contenido-footer {
+    width: 70%;
+    display: flex;
+    margin: 0 auto;
+    padding: 80px 0px 40px;
+    justify-content: space-between;
+    border-bottom: 1px solid #ffffff;
+}
+.menu-footer {
+    display: block;
+}
+
+.nav-link {
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.separador {
+    margin-bottom: 10px;
+}
+
+.horario-atencion, .servicios, .politics {
+    line-height: 30px;
+}
+
+.suscribete-form {
+    width: 70%;
+    text-align: center;
+    padding: 30px 0px 0px;
+    margin: 0 auto;
+}
+
+.form-suscribe {
+    max-width: 300px;
+    width: 100%;
+    position: relative;
+    left: 35%;
+}
+
+.form-suscribe .name input {
+    
+    width: 100%;
+    background-color: transparent;
+    color: #ffffff;
+    padding-top: 20px;
+    border: none;
+    outline: 0px;
+    position: relative;
+    top: -6px;
+}
+
+
+.form-suscribe .label-name {
+    position: absolute;
+    bottom: 43px;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+    border-bottom: 1px solid #c7c7c7;
+}
+
+.form-suscribe .label-name::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 100%;
+    border-bottom: 3px solid #1B1464;
+    transform: translateX(-300%);
+    transition: all0.3S ease;
+}
+
+.text-nombre {
+    position: absolute;
+    bottom: 5PX;
+    left: 0;
+    transition: all 0.3s ease;
+    color: #ffffff;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus {
+    background-color: transparent;
+} 
+
+.form-suscribe input:focus + .label-name .text-nombre,
+.form-suscribe input:valid + .label-name .text-nombre {
+    transform: translateY(-20px);
+    font-size: 14px;
+    color: #1B1464;
+    background-color: transparent;
+}
+
+.form-suscribe input:focus + .label-name::after,
+.form-suscribe input:valid + .label-name::after {
+    transform: translateX(0%);
+}
+
+
+.form-suscribe .email input {
+    
+    width: 100%;
+    background-color: transparent;
+    color: #ffffff;
+    padding-top: 20px;
+    border: none;
+    outline: 0px;
+    position: relative;
+    top: 20px;
+}
+
+.form-suscribe .label-email {
+    position: absolute;
+    top: 96px;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+    border-bottom: 1px solid #c7c7c7;
+}
+
+.form-suscribe .label-email::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 100%;
+    border-bottom: 3px solid #1B1464;
+    transform: translateX(-300%);
+    transition: all0.3S ease;
+}
+
+.text-email {
+    position: absolute;
+    bottom: 5PX;
+    left: 0;
+    transition: all 0.3s ease;
+    color: #ffffff;
+}
+
+.form-suscribe input:focus + .label-email .text-email,
+.form-suscribe input:valid + .label-email .text-email {
+    transform: translateY(-20px);
+    font-size: 14px;
+    color: #1B1464;
+}
+
+.form-suscribe input:focus + .label-email::after,
+.form-suscribe input:valid + .label-email::after {
+    transform: translateX(0%);
+}
+
+.buton-suscribete {
+    position: absolute;
+    bottom: -90px;
+    left: 22%;
+    display: block;
+    width: 170px;
+    height: 40px;
+    background-color: #1B1464;
+    color: #ffffff;
+    text-align: center;
+    border: none;
+    font-size: 14px;
+    font-weight: 500;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.buton-suscribete:hover {
+    background-color: #28216d;
+    opacity: 75%;
+}
+

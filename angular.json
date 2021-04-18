@@ -120,5 +120,8 @@
       }
     }
   },
-  "defaultProject": "newStyleDog"
+  "defaultProject": "newStyleDog",
+  "cli": {
+    "analytics": false
+  }
 }
