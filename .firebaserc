@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "newstyle-9a9bc": {
+      "hosting": {
+        "newStyleDog": [
+          "newstyle-9a9bc"
+        ]
+      }
+    }
+  }
+}

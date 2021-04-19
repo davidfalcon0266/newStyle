@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthService } from './services/auth.service';
 import { CompartidoService } from './services/compartido.service';
 
 @Component({
@@ -8,10 +9,9 @@ import { CompartidoService } from './services/compartido.service';
 })
 export class AppComponent {
   title = 'newStyleDog';
-  modal: boolean;
 
-  constructor(public modalService: CompartidoService) {
-     this.modal = modalService.modal;
+  constructor(public auth: AuthService) {
+
   }
 
 
